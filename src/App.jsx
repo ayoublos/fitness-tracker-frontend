@@ -14,11 +14,7 @@ const API=import.meta.env.VITE_API_URL
 
 function App() {
   
-  useEffect(()=>{
-    fetch(`${API}/workouts`).then(res=>res.json()).then(res=>
-      console.log(res)
-    )
-  },[])
+
 
   return (
     <div>
