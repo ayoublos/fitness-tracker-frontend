@@ -9,6 +9,7 @@ import Error from './pages/Error'
 import Show from './pages/Show'
 import Index from './pages/Index'
 import New from './pages/New'
+import NavBar from './components/NavBar'
 // import NavBar from './component/NavBar'
 const API=import.meta.env.VITE_API_URL
 
@@ -19,14 +20,14 @@ function App() {
   return (
     <div>
       <Router>
-        {/* <NavBar/> */}
+        <NavBar/>
         <main>
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/workouts' element={<Index/>}/>
-            <Route path='/workout/:id' element={<Show/>}/>
-            <Route path='/workout/:id/:edit' element={<Edit/>}/>
-            <Route path='/workout/new' element={<New/>}/>
+            <Route path='/workouts/:id' element={<Show/>}/>
+            <Route path='/workouts/:id/:edit' element={<Edit/>}/>
+            <Route path='/workouts/new' element={<New/>}/>
             {/* <Route path='*' element={<Error/>}/> */}
           
           </Routes>
